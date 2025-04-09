@@ -79,6 +79,5 @@ The author is not responsible for any misuse or damage caused by using this appl
 
 **Kavinkumar S**  
 Ethical Hacker | VAPT Analyst | Cybersecurity Researcher  
-[LinkedIn](www.linkedin.com/in/KAVINKUMAR-S758
-) • [Email](mailto:kavinkumarkumar758@gmail.com)
+[LinkedIn](www.linkedin.com/in/kavinkumar-s758) • [Email](mailto:kavinkumarkumar758@gmail.com)
 ```
