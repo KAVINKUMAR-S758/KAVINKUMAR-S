@@ -35,7 +35,7 @@ vulnerable-webapp/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/KAVINKUMAR-S758/KAVINKUMAR-S.git/vulnerable-webapp.git
+git clone https://github.com/KAVINKUMAR-S758/KAVINKUMAR-S.git/vulnerable-webapp.zip
 ```
 
 ### 2. Unzip the Project
