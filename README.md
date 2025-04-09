@@ -4,10 +4,14 @@
 
 ```
 vulnerable-webapp/
-vulnerable-webapp/
 ├── app.js
 ├── database.js
 ├── auth.js
+├── database.db
+├── node_modules
+│   ├── @gar 
+│   ├── @npmcli
+│   ├── ...
 ├── uploads/
 ├── views/
 │   ├── login.html
