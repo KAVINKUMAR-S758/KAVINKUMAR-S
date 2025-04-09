@@ -4,14 +4,26 @@
 
 ```
 vulnerable-webapp/
-├── app.js                # Main application file
-├── auth.js               # Authentication logic
-├── database.js           # SQLite DB handler
-├── views/                # HTML views (login, register, etc.)
-├── public/               # Static files (CSS, JS, images)
-├── uploads/              # File upload directory
-├── database.db           # SQLite database
-├── package.json
+vulnerable-webapp/
+├── app.js
+├── database.js
+├── auth.js
+├── uploads/
+├── views/
+│   ├── login.html
+│   ├── register.html
+│   ├── profile.html
+│   ├── gallery.html
+│   ├── change-password.html
+│   └── create-post.html
+└── public/
+    ├── css/
+    │   ├── style.css
+    │   └── auth.css
+    ├── js/
+    │   └── main.js
+    └── images/
+        └── logo.png
 ```
 
 ---
