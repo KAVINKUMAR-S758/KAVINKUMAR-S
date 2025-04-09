@@ -35,7 +35,7 @@ vulnerable-webapp/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/vulnerable-webapp.git
+git clone https://github.com/KAVINKUMAR-S758/KAVINKUMAR-S.git/vulnerable-webapp.git
 ```
 
 ### 2. Unzip the Project
@@ -77,7 +77,6 @@ The author is not responsible for any misuse or damage caused by using this appl
 
 **Kavinkumar S**  
 Ethical Hacker | VAPT Analyst | Cybersecurity Researcher  
-[LinkedIn](https://linkedin.com/in/yourprofile) • [Email](mailto:your.email@example.com)
+[LinkedIn](www.linkedin.com/in/KAVINKUMAR-S758
+) • [Email](mailto:kavinkumarkumar758@gmail.com)
 ```
-
-Let me know if you'd like me to customize the GitHub link, LinkedIn, or email address before you publish!
