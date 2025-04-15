@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="/images/logo.png" alt="Logo">
+                <span>VulnerableApp</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/gallery" class="active">Gallery</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">My Gallery</h1>
+                    <a href="/profile" class="btn">Back to Profile</a>
+                </div>
+                <div class="card-body">
+                    <% if (files.length > 0) { %>
+                        <div class="image-gallery">
+                            <% files.forEach(file => { %>
+                                <div class="gallery-item">
+                                    <div class="gallery-item-inner">
+                                        <img src="/uploads/<%= file.filename %>" alt="<%= file.originalname %>">
+                                        <div class="gallery-item-overlay">
+                                            <div class="overlay-content">
+                                                <p><%= file.originalname %></p>
+                                                <button class="btn btn-danger delete-btn" 
+                                                        data-filename="<%= file.filename %>"
+                                                        data-id="<%= file.id %>">
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    <% } else { %>
+                        <p>You haven't uploaded any images yet.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 VulnerableApp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/gallery.js"></script>
+</body>
+</html>

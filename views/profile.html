@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="/images/logo.png" alt="Logo">
+                <span>VulnerableApp</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/profile" class="active">Profile</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">Welcome, <%= user.username %></h1>
+                </div>
+                <div class="card-body">
+                    <div class="user-info">
+                        <p><strong>Email:</strong> <%= user.email %></p>
+                    </div>
+                    
+                    <div class="actions">
+                        <a href="/auth/change-password" class="btn">Change Password</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Upload Image</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="file-upload" class="form-label">Choose an image</label>
+                            <input type="file" id="file-upload" name="image" accept="image/*" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <img id="image-preview" style="display: none; max-width: 300px; margin-bottom: 1rem;">
+                        </div>
+                        <button type="submit" class="btn btn-success">Upload Image</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Create Post</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/posts" method="POST">
+                        <div class="form-group">
+                            <label for="post-content" class="form-label">What's on your mind?</label>
+                            <textarea id="post-content" name="content" rows="4" required class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Your Posts</h2>
+                </div>
+                <div class="card-body">
+                    <% if (posts.length > 0) { %>
+                        <% posts.forEach(post => { %>
+                            <div class="post">
+                                <div class="post-content">
+                                    <p><%- post.content %> </p>
+                                </div>
+                                <div class="post-meta">
+                                    <small>Posted on <%= new Date().toLocaleDateString() %></small>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <p>You haven't posted anything yet.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 VulnerableApp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
